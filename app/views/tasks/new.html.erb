@@ -1,0 +1,13 @@
+<h1>Create a new task</h1>
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :date %>
+  <%= f.text_field :date %>
+  <%= f.label :taskmanager %>
+  <%= f.text_field :taskmanager %>
+  <%= f.submit %>
+<% end %>
+
+

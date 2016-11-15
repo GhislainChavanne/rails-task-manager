@@ -1,0 +1,14 @@
+<h1>WELCOME TO YOU TASK'S DASHBOARD</h1>
+
+<% @tasks.each do |task| %>
+  <h3>TASK NAME: <%= task.name %></h3>
+  <p>DATE: <%= task.date %></p>
+  <p>TASK MANAGER: <%= task.taskmanager %></p>
+  <%= link_to "show", task_path(task) %>
+  <%= link_to "update", edit_task_path(task) %>
+  <%= link_to "delete", task_path(task), method: :delete %>
+<% end %>
+
+<div>
+  <%= link_to "create new tasks", new_task_path %>
+</div>
